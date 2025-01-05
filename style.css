@@ -1,0 +1,101 @@
+:root {
+  --bg-color: #0D0D0D;
+  --text-color: #00FF00;
+  --secondary-color: #4A4A4A;
+  --font-family: 'Space Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6;
+}
+
+#terminal {
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.command-line {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.prompt {
+  color: var(--text-color);
+  margin-right: 0.5rem;
+}
+
+.input {
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: inherit;
+  outline: none;
+  min-width: 1px;
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.timestamp {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.welcome-text {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.output-line {
+  margin: 0.5rem 0;
+}
+
+.section-title {
+  color: var(--text-color);
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  #terminal {
+    padding: 1rem;
+  }
+  
+  .prompt, .input {
+    font-size: 14px;
+  }
+}
