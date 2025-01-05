@@ -50,7 +50,7 @@ export const commands = {
   contact: () => ({
     type: 'contact',
     content: {
-      email: 'dev@example.com',
+      email: 'surajssc1232@gmail.com',
       social: [
         { platform: 'GitHub', url: 'github.com/surajssc1232', icon: '󰊤' },
         { platform: 'LinkedIn', url: 'linkedin.com/in/username', icon: '󰌻' },
