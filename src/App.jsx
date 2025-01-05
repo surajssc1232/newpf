@@ -14,9 +14,10 @@ function App() {
 
   const processCommand = (cmd) => {
     const trimmedCmd = cmd.trim().toLowerCase();
+    const response = commands[trimmedCmd] || 'Command not found. Type "help" for available commands.';
     const newEntry = {
       command: cmd,
-      response: commands[trimmedCmd] || 'Command not found. Type "help" for available commands.'
+      response: response
     };
 
     setCommandHistory([...commandHistory, newEntry]);
