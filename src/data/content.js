@@ -1,8 +1,9 @@
 export const commands = {
   help: 'Available commands: about, frontend, backend, projects, contact, clear',
   
-  about: `Hi, I'm Suraj Chauhan! I'm a full-stack developer specializing in Java and Python technologies.
-Type 'frontend' or 'backend' to see my specific skills in each area.`,
+  about: `Hi, I'm Suraj Chauhan! I'm a full-stack developer specializing in Java and Python technologies.<br>
+Type 'frontend' or 'backend' to see my specific skills in each area.<br>
+Experience: 5+ years in software development, working on various projects and technologies.`,
   
   frontend: `Frontend Technologies:
 - HTML5 & CSS3

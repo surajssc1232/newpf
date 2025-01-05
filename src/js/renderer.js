@@ -26,27 +26,58 @@ export class TerminalRenderer {
   }
 
   static renderProfile(profile) {
-    return `
-      <div class="profile">
-        <p class="bio">${profile.bio}</p>
-        
-        <div class="skills-grid">
-          ${profile.skills.map(category => `
-            <div class="skill-category">
-              <h3>${category.category}</h3>
-              <div class="skill-items">
-                ${category.items.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
-              </div>
-            </div>
-          `).join('')}
-        </div>
+    const profileContainer = document.createElement('div');
+    profileContainer.className = 'profile-container';
 
-        <div class="experience">
-          <h3>Experience</h3>
-          ${profile.experience.map(exp => `<div class="experience-item">${exp}</div>`).join('')}
-        </div>
-      </div>
-    `;
+    const bio = document.createElement('p');
+    bio.textContent = profile.bio;
+    profileContainer.appendChild(bio);
+
+    const skills = document.createElement('div');
+    skills.className = 'skills';
+
+    profile.skills.forEach(skill => {
+      const skillCategory = document.createElement('div');
+      skillCategory.className = 'skill-category';
+
+      const categoryTitle = document.createElement('h4');
+      categoryTitle.textContent = skill.category;
+      skillCategory.appendChild(categoryTitle);
+
+      const skillItems = document.createElement('ul');
+      skill.items.forEach(item => {
+        const skillItem = document.createElement('li');
+        skillItem.textContent = item;
+        skillItems.appendChild(skillItem);
+      });
+
+      skillCategory.appendChild(skillItems);
+      skills.appendChild(skillCategory);
+    });
+
+    profileContainer.appendChild(skills);
+
+    // Check if experience exists and render it
+    if (profile.experience) {
+      const experience = document.createElement('div');
+      experience.className = 'experience';
+
+      const experienceTitle = document.createElement('h4');
+      experienceTitle.textContent = 'Experience';
+      experience.appendChild(experienceTitle);
+
+      const experienceItems = document.createElement('ul');
+      profile.experience.forEach(item => {
+        const experienceItem = document.createElement('li');
+        experienceItem.textContent = item;
+        experienceItems.appendChild(experienceItem);
+      });
+
+      experience.appendChild(experienceItems);
+      profileContainer.appendChild(experience);
+    }
+
+    return profileContainer;
   }
 
   static renderProjects(projects) {

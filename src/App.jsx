@@ -14,7 +14,9 @@ function App() {
 
   const processCommand = (cmd) => {
     const trimmedCmd = cmd.trim().toLowerCase();
+    console.log(`Processing command: ${trimmedCmd}`); // Add this line for debugging
     const response = commands[trimmedCmd] || 'Command not found. Type "help" for available commands.';
+    console.log(`Response: ${response}`); // Add this line for debugging
     const newEntry = {
       command: cmd,
       response: response
@@ -32,7 +34,7 @@ function App() {
             <div className="prompt-container">
               <span>visitor@portfolio:~$ {entry.command}</span>
             </div>
-            <div className="response">{entry.response}</div>
+            <div className="response" dangerouslySetInnerHTML={{ __html: entry.response }}></div>
           </div>
         ))}
         <div className="prompt-container">
