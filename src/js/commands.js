@@ -13,17 +13,13 @@ export const commands = {
   about: () => ({
     type: 'profile',
     content: {
-      bio: 'Senior Software Engineer passionate about creating elegant solutions to complex problems.',
+      bio: 'Hello I am Suraj chauhan an aspiring Backend Dev skilled in JAVA <3 and Springboot and A little bit of python',
       skills: [
-        { category: 'Frontend', items: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'] },
-        { category: 'Backend', items: ['Node.js', 'Python', 'PostgreSQL', 'GraphQL'] },
-        { category: 'DevOps', items: ['AWS', 'Docker', 'CI/CD', 'Kubernetes'] }
+        { category: 'Frontend', items: ['HTML5',  'CSS3'] },
+        { category: 'Backend', items: ['Python', 'PostgreSQL', 'Java','SpringBoot'] },
+        { category: 'DevOps', items: ['Docker', 'CI/CD'] }
       ],
-      experience: [
-        'Tech Lead at Innovation Labs (2021-Present)',
-        'Senior Developer at TechCorp (2019-2021)',
-        'Full-stack Developer at StartupX (2017-2019)'
-      ]
+      
     }
   }),
   
@@ -31,22 +27,22 @@ export const commands = {
     type: 'projects',
     content: [
       {
-        name: 'AI-Powered Analytics Platform',
-        tech: ['React', 'Python', 'TensorFlow', 'AWS'],
-        desc: 'Enterprise-scale analytics with machine learning capabilities',
-        link: 'https://github.com/username/ai-analytics'
+        name: 'Tune Merge',
+        tech: ['SpringBoot', 'Java','H2Database','WebAPI'],
+        desc: 'A cross platform playlist export servict',
+        link: 'https://github.com/surajssc1232/tunemerge'
       },
       {
-        name: 'Blockchain Exchange Platform',
-        tech: ['Next.js', 'Solidity', 'Node.js', 'PostgreSQL'],
-        desc: 'Decentralized cryptocurrency exchange platform',
-        link: 'https://github.com/username/dex-platform'
+        name: 'RoyalAi',
+        tech: ['Python',  'Flask', 'PostgreSQL','Cohere'],
+        desc: 'A Fine tuned Chat bot using Cohere LLM',
+        link: 'https://github.com/surajssc1232/royalai'
       },
       {
-        name: 'Real-time Collaboration Tool',
-        tech: ['Vue.js', 'WebSocket', 'Redis', 'MongoDB'],
-        desc: 'Team collaboration tool with real-time updates',
-        link: 'https://github.com/username/collab-tool'
+        name: 'Weather Dashboard',
+        tech: ['H2Database', 'SpringBoot','Java'],
+        desc: 'A realtime and Dynamic Weather DashBoard for metro cities in India',
+        link: 'https://github.com/surajssc1232/weather_dashboard'
       }
     ]
   }),
@@ -56,9 +52,9 @@ export const commands = {
     content: {
       email: 'dev@example.com',
       social: [
-        { platform: 'GitHub', url: 'github.com/username', icon: '󰊤' },
+        { platform: 'GitHub', url: 'github.com/surajssc1232', icon: '󰊤' },
         { platform: 'LinkedIn', url: 'linkedin.com/in/username', icon: '󰌻' },
-        { platform: 'Twitter', url: 'twitter.com/username', icon: '󰕄' }
+        { platform: 'Twitter', url: 'twitter.com/surajkhahai', icon: '󰕄' }
       ]
     }
   }),
